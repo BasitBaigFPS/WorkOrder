@@ -1,0 +1,15 @@
+git add .
+git commit -m "Update of ODOO Billing Module,Change Paid Voucher Transactions View, Show Bank and Security Deposit Values,18-02-2023-2:00pm"
+
+//git remote add WOGit https://github.com/BasitBaigFPS/WorkOrder.git
+
+git push WOGit  master
+
+
+
+
+
+git clone https://github.com/basitbaig/Billing3.0.git
+
+ 
+

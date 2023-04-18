@@ -1,0 +1,21 @@
+D:\Websites\FPSERP\BLL\obj\Debug\ResolveAssemblyReference.cache
+D:\Websites\FPSERP\BLL\bin\Debug\BLL.dll
+D:\Websites\FPSERP\BLL\bin\Debug\BLL.pdb
+D:\Websites\FPSERP\BLL\bin\Debug\DAL.dll
+D:\Websites\FPSERP\BLL\bin\Debug\DAL.pdb
+D:\Websites\FPSERP\BLL\obj\Debug\BLL.dll
+D:\Websites\FPSERP\BLL\obj\Debug\BLL.pdb
+G:\FPSERP\FPSERP\BLL\bin\Debug\BLL.dll
+G:\FPSERP\FPSERP\BLL\bin\Debug\BLL.pdb
+G:\FPSERP\FPSERP\BLL\bin\Debug\DAL.dll
+G:\FPSERP\FPSERP\BLL\bin\Debug\DAL.pdb
+G:\FPSERP\FPSERP\BLL\obj\Debug\ResolveAssemblyReference.cache
+G:\FPSERP\FPSERP\BLL\obj\Debug\BLL.dll
+G:\FPSERP\FPSERP\BLL\obj\Debug\BLL.pdb
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\bin\Debug\BLL.dll
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\bin\Debug\BLL.pdb
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\bin\Debug\DAL.dll
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\bin\Debug\DAL.pdb
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\obj\Debug\BLL.dll
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\BLL\obj\Debug\BLL.pdb

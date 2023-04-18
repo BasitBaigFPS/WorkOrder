@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report DataSourceName="DS_WO" Width="7.72604992945778in" Name="ProjectEstimate" xmlns="http://schemas.telerik.com/reporting/2012/3.4">
+  <DataSources>
+    <SqlDataSource ConnectionString="SQLPWRDB" SelectCommand="SELECT   [EstimateNo]&#xD;&#xA;      ,[BranchID]&#xD;&#xA;      ,[Description]&#xD;&#xA;      ,[EstDate]&#xD;&#xA;      ,[SystemID]&#xD;&#xA;      ,[UsrID]&#xD;&#xA;      ,[WorkNo]&#xD;&#xA;      ,[WorkDesc]&#xD;&#xA;      ,[Rate]&#xD;&#xA;      ,[Quantity]&#xD;&#xA;      ,[Cost]&#xD;&#xA;      ,[Paid]&#xD;&#xA;      ,[Balance]&#xD;&#xA;      ,[ExtraComments]&#xD;&#xA;      ,[IsAdditionalApproval]&#xD;&#xA;      ,[branch]&#xD;&#xA;      ,[MDiscount]&#xD;&#xA;      ,[PayInProcess]&#xD;&#xA;      ,[UserName]&#xD;&#xA;      ,[CompImage]&#xD;&#xA;  FROM [SQLPWRDB].[dbo].[View_ProjEstimate] order by workno" Name="DS_WO" />
+    <SqlDataSource ConnectionString="SQLPWRDB" SelectCommand="SELECT   [EstimateNo]&#xD;&#xA;      ,[BranchID]&#xD;&#xA;      ,[Description]&#xD;&#xA;      ,[EstDate]&#xD;&#xA;      ,[SystemID]&#xD;&#xA;      ,[UsrID]&#xD;&#xA;      ,[WorkNo]&#xD;&#xA;      ,[WorkDesc]&#xD;&#xA;      ,[Rate]&#xD;&#xA;      ,[Quantity]&#xD;&#xA;      ,[Cost]&#xD;&#xA;      ,[Paid]&#xD;&#xA;      ,[Balance]&#xD;&#xA;      ,[ExtraComments]&#xD;&#xA;      ,[IsAdditionalApproval]&#xD;&#xA;      ,[branch]&#xD;&#xA;      ,[MDiscount]&#xD;&#xA;      ,[PayInProcess]&#xD;&#xA;      ,[UserName]&#xD;&#xA;      ,[CompImage]&#xD;&#xA;  FROM [SQLPWRDB].[dbo].[View_ProjEstimateAdditional] order by workno" Name="DS_ADDWO" />
+  </DataSources>
+  <Items>
+    <PageHeaderSection Height="0.899999936421712in" Name="pageHeader">
+      <Items>
+        <TextBox Width="6.50521646896787in" Height="0.579166650772095in" Left="1.19999996821086in" Top="0.0208333333333333in" Value="=IIF(Fields.SystemID='FPS',&quot;Foundation Public School&quot;,&quot;Head Start School System&quot;)" Name="reportNameTextBox" StyleName="PageInfo">
+          <Style TextAlign="Left" VerticalAlign="Top">
+            <Font Size="16pt" Italic="True" />
+          </Style>
+        </TextBox>
+        <PictureBox Url="=IIF(Fields.SystemID='FPS',&quot;http://www.fps.edu.pk/images/fpslogo.png&quot;,&quot;http://www.fps.edu.pk/images/hsslogo.png&quot;)" Width="2.0587490181857cm" Height="1.47108322831955cm" Left="0.26955798988777cm" Top="0.0529166651947631cm" Sizing="ScaleProportional" MimeType="" Name="pictureBox1" />
+        <TextBox Width="7.49387550354004in" Height="0.299921115239461in" Left="0.106125195821126in" Top="0.600078741709391in" Value="Payment Request" Name="titleTextBox">
+          <Style Color="31, 73, 125" TextAlign="Center" VerticalAlign="Middle">
+            <Font Size="18pt" Bold="True" />
+          </Style>
+        </TextBox>
+      </Items>
+    </PageHeaderSection>
+    <PageFooterSection Height="0.441666682561239in" Name="pageFooter">
+      <Items>
+        <TextBox Width="3.83177496472889in" Height="0.400000015894572in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="=NOW()" Name="currentTimeTextBox" StyleName="PageInfo" />
+        <TextBox Width="3.83177496472889in" Height="0.400000015894572in" Left="3.87344163139556in" Top="0.0208333333333333in" Value="=PageNumber" Name="pageInfoTextBox" StyleName="PageInfo">
+          <Style TextAlign="Right" />
+        </TextBox>
+      </Items>
+    </PageFooterSection>
+    <ReportHeaderSection Height="0.6000000806096in" Name="reportHeader">
+      <Items>
+        <TextBox Width="1.02935220694521in" Height="0.2in" Left="5.07057062784831in" Top="0.0958836873372396in" Value="Branch Name:" CanGrow="True" Name="systemIDCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="White" Color="Black" TextAlign="Left">
+            <Font Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="0.34968807196596in" Height="0.2in" Left="7.25031280517578in" Top="0.115432421366374in" Value="=Fields.SystemID" CanGrow="True" Name="systemIDDataTextBox" StyleName="Data">
+          <Style Visible="False" />
+        </TextBox>
+        <TextBox Width="0.993874886592018in" Height="0.2in" Left="0.106125195821126in" Top="0.100000063578288in" Value="Estimate No:" CanGrow="True" Name="estimateNoCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="White" Color="Black" TextAlign="Left">
+            <Font Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.39992111817975in" Height="0.2in" Left="1.10007890065511in" Top="0.100000063578288in" Value="= &quot;PWR/&quot; + Fields.BranchID + &quot;-&quot; +Fields.EstimateNo" CanGrow="True" Name="estimateNoDataTextBox" StyleName="Data">
+          <Style>
+            <Font Underline="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="0.993874886592018in" Height="0.2in" Left="0.106125195821126in" Top="0.395883719126383in" Value="Description:" CanGrow="True" Name="descriptionCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="White" Color="Black" TextAlign="Left">
+            <Font Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="4.99984282151837in" Height="0.2in" Left="1.10007890065511in" Top="0.400000095367432in" Value="=Fields.Description" CanGrow="True" Name="descriptionDataTextBox" StyleName="Data">
+          <Style>
+            <Font Underline="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="0.493736762761858in" Height="0.2in" Left="6.10000038146973in" Top="0.395883719126383in" Value="Date:" CanGrow="True" Name="estDateCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="White" Color="Black" TextAlign="Right">
+            <Font Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.06116344428041in" Height="0.2in" Left="6.64405314127604in" Top="0.400000095367432in" Value="=Fields.EstDate" Format="{0:d}" CanGrow="True" Name="estDateDataTextBox" StyleName="Data">
+          <Style>
+            <Font Underline="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.60521570841471in" Height="0.2in" Left="6.1000010172526in" Top="0.115432421366374in" Value="= Fields.branch" CanShrink="True" Name="textBox46">
+          <Style>
+            <Font Underline="True" />
+          </Style>
+        </TextBox>
+      </Items>
+    </ReportHeaderSection>
+    <ReportFooterSection Height="0.416478474934896in" Name="reportFooter">
+      <Items>
+        <TextBox Width="1.5in" Height="0.200000127156576in" Left="3in" Top="0.216438929239909in" Value="Recommended By" Name="textBox23">
+          <Style TextAlign="Center" VerticalAlign="Middle">
+            <BorderStyle Top="Solid" />
+            <Font Size="9pt" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.49387470881144in" Height="0.200000127156576in" Left="0.106125195821126in" Top="0.216438929239909in" Value="= Fields.UserName" Name="textBox35">
+          <Style TextAlign="Center" VerticalAlign="Middle">
+            <BorderStyle Top="Solid" />
+            <Font Size="9pt" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.50000095367432in" Height="0.200000127156576in" Left="6.09999974568685in" Top="0.216438929239909in" Value="Approved By" Name="textBox36">
+          <Style TextAlign="Center" VerticalAlign="Middle">
+            <BorderStyle Top="Solid" />
+            <Font Size="9pt" />
+          </Style>
+        </TextBox>
+      </Items>
+    </ReportFooterSection>
+    <DetailSection Height="0.0520833333333328in" Name="detail">
+      <Style Visible="False" />
+    </DetailSection>
+  </Items>
+  <StyleSheet>
+    <StyleRule>
+      <Style Color="28, 58, 112">
+        <Font Name="Tahoma" Size="18pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Title" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style BackgroundColor="28, 58, 112" Color="White" VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="10pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Caption" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black" VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Data" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black" VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="8pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="PageInfo" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black">
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="Table" StyleName="Corporate.TableNormal" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style BackgroundColor="28, 58, 112" Color="White" VerticalAlign="Middle">
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="10pt" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Corporate.TableHeader" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Corporate.TableBody" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <PageSettings>
+    <PageSettings PaperKind="A4" Landscape="False">
+      <Margins>
+        <MarginsU Left="0.35in" Right="0in" Top="0.5in" Bottom="0.25in" />
+      </Margins>
+    </PageSettings>
+  </PageSettings>
+  <Groups>
+    <Group Name="labelsGroup">
+      <GroupHeader>
+        <GroupHeaderSection PrintOnEveryPage="True" Height="2.29588381449381in" Name="labelsGroupHeaderSection">
+          <Items>
+            <Table DataSourceName="DS_WO" Width="7.49387574195849in" Height="0.95208350219641in" Left="0.106125195821127in" Top="0.129265149434408in" Name="table1" StyleName="Corporate.TableNormal">
+              <Body>
+                <Cells>
+                  <TableCell RowIndex="0" ColumnIndex="0" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.629939035353852in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=Fields.WorkNo" Name="textBox10" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Center" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="1" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="2.67887600485475in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=Fields.WorkDesc" Name="textBox11" StyleName="Corporate.TableBody">
+                        <Style VerticalAlign="Middle">
+                          <Font Name="Verdana" Size="8pt" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="2" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=Fields.Cost" Format="{0:N0}" Name="textBox12" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=Fields.Cost" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="3" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=Fields.PayInProcess" Format="{0:N0}" Name="textBox13" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Visible="True" Color="White" />
+                            <Filters>
+                              <Filter Expression="=Fields.PayInProcess" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="4" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=Fields.Paid" Format="{0:N0}" Name="textBox14" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="5" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=IIF(Fields.ExtraComments='(Non-Utilized)',Fields.Balance,Fields.MDiscount)" Format="{0:N0}" Name="textBox31" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=IIF(Fields.ExtraComments='(Non-Utilized)',Fields.Balance,Fields.MDiscount)" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="6" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.199999988472964in" Left="0in" Top="0in" Value="=IIF(Fields.ExtraComments=&quot;(Non-Utilized)&quot;,0,Fields.Balance)" Format="{0:N0}" Name="textBox32" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=IIF(Fields.ExtraComments=&quot;(Non-Utilized)&quot;,0,Fields.Balance)" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="0" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.629939035353852in" Height="0.270833382295516in" Left="0in" Top="0in" Name="textBox1" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Center" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="1" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="2.67887600485475in" Height="0.270833382295516in" Left="0in" Top="0in" Value="Actual Gross Approved Amount:" Name="textBox9" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="2" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.270833382295516in" Left="0in" Top="0in" Value="=sum(Fields.Cost)" Format="{0:N0}" Name="TotalAmount" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="3" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.270833382295516in" Left="0in" Top="0in" Value="=SUM(Fields.PayInProcess)" Format="{0:N0}" Name="TotalInProcess" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="4" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.270833382295516in" Left="0in" Top="0in" Value="=SUM(Fields.Paid)" Format="{0:N0}" Name="TotalPaid" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="5" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.270833382295516in" Left="0in" Top="0in" Value="=SUM(IIF(Fields.ExtraComments='(Non-Utilized)',Fields.Balance,Fields.MDiscount))" Format="{0:N0}" Name="TotalDiscount" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=SUM(IIF(Fields.ExtraComments='(Non-Utilized)',Fields.Balance,Fields.MDiscount))" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="6" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.837012140349979in" Height="0.270833382295516in" Left="0in" Top="0in" Value="=SUM(IIF(Fields.ExtraComments=&quot;(Non-Utilized)&quot;,0,Fields.Balance))" Format="{0:N0}" Name="TotalBalance" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" />
+                        </Style>
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=SUM(IIF(Fields.ExtraComments=&quot;(Non-Utilized)&quot;,0,Fields.Balance))" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                </Cells>
+                <Columns>
+                  <Column Width="0.629939035353852in" />
+                  <Column Width="2.67887600485475in" />
+                  <Column Width="0.837012140349979in" />
+                  <Column Width="0.837012140349979in" />
+                  <Column Width="0.837012140349979in" />
+                  <Column Width="0.837012140349979in" />
+                  <Column Width="0.837012140349979in" />
+                </Columns>
+                <Rows>
+                  <Row Height="0.199999965338201in" />
+                  <Row Height="0.270833395754759in" />
+                </Rows>
+              </Body>
+              <Corner />
+              <RowGroups>
+                <TableGroup Name="Detail">
+                  <Groupings>
+                    <Grouping />
+                  </Groupings>
+                </TableGroup>
+                <TableGroup Name="group" />
+              </RowGroups>
+              <ColumnGroups>
+                <TableGroup>
+                  <ReportItem>
+                    <TextBox Width="7.49387574195849in" Height="0.281250057147283in" Left="0in" Top="0in" Value="Payment Summary" CanShrink="True" Name="textBox33" StyleName="Corporate.TableHeader">
+                      <Style Visible="True" BackgroundColor="217, 217, 217" Color="Black" TextAlign="Center">
+                        <Font Size="14pt" />
+                      </Style>
+                    </TextBox>
+                  </ReportItem>
+                  <ChildGroups>
+                    <TableGroup Name="group1">
+                      <ReportItem>
+                        <TextBox Width="0.629939035353852in" Height="0.200000052051263in" Left="0in" Top="0in" Value="WORK NO" Name="textBox2" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group2">
+                      <ReportItem>
+                        <TextBox Width="2.67887600485475in" Height="0.200000052051263in" Left="0in" Top="0in" Value="D E S C R I P T I O N" Name="textBox3" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group3">
+                      <ReportItem>
+                        <TextBox Width="0.837012140349979in" Height="0.200000052051263in" Left="0in" Top="0in" Value="A M O U N T" Name="textBox4" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group4">
+                      <ReportItem>
+                        <TextBox Width="0.837012140349979in" Height="0.200000052051263in" Left="0in" Top="0in" Value="IN PROCESS" Name="textBox5" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group5">
+                      <ReportItem>
+                        <TextBox Width="0.837012140349979in" Height="0.200000052051263in" Left="0in" Top="0in" Value="P A I D" Name="textBox6" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group6">
+                      <ReportItem>
+                        <TextBox Width="0.837012140349979in" Height="0.200000052051263in" Left="0in" Top="0in" Value="Non-Utilized" Name="textBox7" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group7">
+                      <ReportItem>
+                        <TextBox Width="0.837012140349979in" Height="0.200000052051263in" Left="0in" Top="0in" Value="BALANCE" Name="textBox8" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center">
+                            <Font Bold="False" />
+                          </Style>
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                  </ChildGroups>
+                </TableGroup>
+              </ColumnGroups>
+            </Table>
+            <Table DataSourceName="DS_ADDWO" Width="7.49387588208633in" Height="0.94166674495373in" Left="0.106125195821126in" Top="1.32926511764526in" Name="table2" StyleName="Corporate.TableNormal">
+              <Body>
+                <Cells>
+                  <TableCell RowIndex="0" ColumnIndex="0" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.667488370700571in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.WorkNo" Name="textBox24" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Center" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="1" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="2.61066990493255in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.WorkDesc" Name="textBox25" StyleName="Corporate.TableBody">
+                        <Style VerticalAlign="Middle">
+                          <Font Name="Verdana" Size="8pt" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="2" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.Cost" Format="{0:N0}" Name="textBox26" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="3" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.PayInProcess" Format="{0:N0}" Name="textBox27" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="4" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.Paid" Format="{0:N0}" Name="textBox28" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="5" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.MDiscount" Format="{0:N0}" Name="textBox29" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=Fields.MDiscount" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="0" ColumnIndex="6" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="=Fields.Balance" Format="{0:N0}" Name="textBox30" StyleName="Corporate.TableBody">
+                        <Style TextAlign="Right" VerticalAlign="Middle" />
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=Fields.Balance" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="0" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.667488370700571in" Height="0.239583449479603in" Left="0in" Top="0in" Name="textBox38" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Center" />
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="1" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="2.61066990493255in" Height="0.239583449479603in" Left="0in" Top="0in" Value="Total Additional Amount :" Name="textBox39" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="True" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="2" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.239583449479603in" Left="0in" Top="0in" Value="=sum(Fields.Cost)" Format="{0:N0}" Name="textBox40" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="191, 191, 191" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="False" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="3" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.239583449479603in" Left="0in" Top="0in" Value="=SUM(Fields.PayInProcess)" Format="{0:N0}" Name="textBox41" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="False" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="4" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.239583449479603in" Left="0in" Top="0in" Value="=SUM(Fields.Paid)" Format="{0:N0}" Name="textBox42" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="False" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="5" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.239583449479603in" Left="0in" Top="0in" Value="=SUM(Fields.MDiscount)" Format="{0:N0}" Name="textBox43" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="False" />
+                        </Style>
+                        <ConditionalFormatting>
+                          <FormattingRule>
+                            <Style Color="White" />
+                            <Filters>
+                              <Filter Expression="=Sum(Fields.MDiscount)" Operator="Equal" Value="0" />
+                            </Filters>
+                          </FormattingRule>
+                        </ConditionalFormatting>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                  <TableCell RowIndex="1" ColumnIndex="6" RowSpan="1" ColumnSpan="1">
+                    <ReportItem>
+                      <TextBox Width="0.843143554790886in" Height="0.239583449479603in" Left="0in" Top="0in" Value="=SUM(Fields.Balance)" Format="{0:N0}" Name="textBox44" StyleName="Corporate.TableBody">
+                        <Style BackgroundColor="242, 242, 242" TextAlign="Right" VerticalAlign="Middle">
+                          <Font Bold="True" Italic="False" />
+                        </Style>
+                      </TextBox>
+                    </ReportItem>
+                  </TableCell>
+                </Cells>
+                <Columns>
+                  <Column Width="0.667488259033115in" />
+                  <Column Width="2.61066968159762in" />
+                  <Column Width="0.843143554790875in" />
+                  <Column Width="0.843143554790875in" />
+                  <Column Width="0.843143554790875in" />
+                  <Column Width="0.843143554790875in" />
+                  <Column Width="0.843143554790875in" />
+                </Columns>
+                <Rows>
+                  <Row Height="0.19999994735166in" />
+                  <Row Height="0.239583441132967in" />
+                </Rows>
+              </Body>
+              <Corner />
+              <RowGroups>
+                <TableGroup Name="Detail">
+                  <Groupings>
+                    <Grouping />
+                  </Groupings>
+                </TableGroup>
+                <TableGroup Name="group8" />
+              </RowGroups>
+              <ColumnGroups>
+                <TableGroup>
+                  <ReportItem>
+                    <TextBox Width="7.49387549125025in" Height="0.302083386263049in" Left="0in" Top="0in" Value="Additional Payment Summary" Name="textBox34" StyleName="Corporate.TableHeader">
+                      <Style Visible="True" BackgroundColor="242, 242, 242" Color="Black" TextAlign="Center">
+                        <Font Size="14pt" />
+                      </Style>
+                    </TextBox>
+                  </ReportItem>
+                  <ChildGroups>
+                    <TableGroup Name="group9">
+                      <ReportItem>
+                        <TextBox Width="0.667488370700571in" Height="0.199999977885254in" Left="0in" Top="0in" Value="WORK NO" Name="textBox16" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group10">
+                      <ReportItem>
+                        <TextBox Width="2.61066990493255in" Height="0.199999977885254in" Left="0in" Top="0in" Value="D E S C R I P T I O N" Name="textBox17" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group11">
+                      <ReportItem>
+                        <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="A M O U N T" Name="textBox18" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group12">
+                      <ReportItem>
+                        <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="IN PROCESS" Name="textBox19" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group13">
+                      <ReportItem>
+                        <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="P A I D" Name="textBox20" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group14">
+                      <ReportItem>
+                        <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="Non-Utilized" Name="textBox21" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                    <TableGroup Name="group15">
+                      <ReportItem>
+                        <TextBox Width="0.843143554790886in" Height="0.199999977885254in" Left="0in" Top="0in" Value="BALANCE" Name="textBox22" StyleName="Corporate.TableHeader">
+                          <Style TextAlign="Center" />
+                        </TextBox>
+                      </ReportItem>
+                    </TableGroup>
+                  </ChildGroups>
+                </TableGroup>
+              </ColumnGroups>
+              <Filters>
+                <Filter Expression="=Fields.EstimateNo" Operator="Equal" Value="=Parameters.EstimateNo.Value" />
+              </Filters>
+              <Action>
+                <ToggleVisibilityAction>
+                  <Targets>
+                    <Target ItemName="Detail" />
+                  </Targets>
+                </ToggleVisibilityAction>
+              </Action>
+            </Table>
+          </Items>
+        </GroupHeaderSection>
+      </GroupHeader>
+      <GroupFooter>
+        <GroupFooterSection Height="2.15191491444906in" Name="labelsGroupFooterSection">
+          <Style Visible="True" />
+          <Items>
+            <SubReport Width="7.49387613932292in" Height="1.39999993642171in" Left="0.106125195821126in" Top="0.452033360799154in" Name="subReport1">
+              <ReportSource>
+                <UriReportSource Uri="TRDX\ProjPayReqGroup.trdx" />
+              </ReportSource>
+              <Action>null</Action>
+            </SubReport>
+            <TextBox Width="1.49387470881144in" Height="0.200078964233398in" Left="0.106125195821126in" Top="0.251875559488932in" Value="Approved By" Name="textBox15">
+              <Style TextAlign="Center" VerticalAlign="Middle">
+                <BorderStyle Top="Solid" />
+              </Style>
+            </TextBox>
+          </Items>
+        </GroupFooterSection>
+      </GroupFooter>
+    </Group>
+  </Groups>
+  <ReportParameters>
+    <ReportParameter Name="EstimateNo" Type="Integer" Text="EstimateNo" AutoRefresh="True">
+      <AvailableValues DataSourceName="DS_WO" ValueMember="=Fields.EstimateNo" />
+      <Value>
+        <String>=Fields.EstimateNo</String>
+      </Value>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

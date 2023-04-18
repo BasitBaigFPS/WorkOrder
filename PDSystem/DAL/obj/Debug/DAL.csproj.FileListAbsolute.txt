@@ -1,0 +1,18 @@
+D:\Websites\FPSERP\DAL\bin\Debug\DAL.dll.config
+D:\Websites\FPSERP\DAL\bin\Debug\DAL.dll
+D:\Websites\FPSERP\DAL\bin\Debug\DAL.pdb
+D:\Websites\FPSERP\DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Websites\FPSERP\DAL\obj\Debug\DAL.dll
+D:\Websites\FPSERP\DAL\obj\Debug\DAL.pdb
+G:\FPSERP\FPSERP\DAL\bin\Debug\DAL.dll.config
+G:\FPSERP\FPSERP\DAL\bin\Debug\DAL.dll
+G:\FPSERP\FPSERP\DAL\bin\Debug\DAL.pdb
+G:\FPSERP\FPSERP\DAL\obj\Debug\ResolveAssemblyReference.cache
+G:\FPSERP\FPSERP\DAL\obj\Debug\DAL.dll
+G:\FPSERP\FPSERP\DAL\obj\Debug\DAL.pdb
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\bin\Debug\DAL.dll.config
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\bin\Debug\DAL.dll
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\bin\Debug\DAL.pdb
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\obj\Debug\DAL.dll
+C:\Users\APPLICATION\Documents\Visual Studio 2010\Projects\Testapplication\DAL\obj\Debug\DAL.pdb

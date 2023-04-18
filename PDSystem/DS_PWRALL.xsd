@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_PWRALL" targetNamespace="http://tempuri.org/DS_PWRALL.xsd" xmlns:mstns="http://tempuri.org/DS_PWRALL.xsd" xmlns="http://tempuri.org/DS_PWRALL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SQLPWRDBConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SQLPWRDBConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PDSystem.Properties.Settings.GlobalReference.Default.SQLPWRDBConn" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ProjEstimateALLTableAdapter" GeneratorDataComponentClassName="View_ProjEstimateALLTableAdapter" Name="View_ProjEstimateALL" UserDataComponentName="View_ProjEstimateALLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLPWRDBConn (Settings)" DbObjectName="SQLPWRDB.dbo.View_ProjEstimateALL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EstimateNo, BranchID, Description, EstDate, SystemID, UsrID, WorkNo, WorkDesc, Rate, Quantity, Cost, Paid, Balance, ExtraComments, IsAdditionalApproval, branch, MDiscount, PayInProcess, UserName, CompImage FROM dbo.View_ProjEstimateALL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EstimateNo" DataSetColumn="EstimateNo" />
+              <Mapping SourceColumn="BranchID" DataSetColumn="BranchID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="EstDate" DataSetColumn="EstDate" />
+              <Mapping SourceColumn="SystemID" DataSetColumn="SystemID" />
+              <Mapping SourceColumn="UsrID" DataSetColumn="UsrID" />
+              <Mapping SourceColumn="WorkNo" DataSetColumn="WorkNo" />
+              <Mapping SourceColumn="WorkDesc" DataSetColumn="WorkDesc" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="Paid" DataSetColumn="Paid" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="ExtraComments" DataSetColumn="ExtraComments" />
+              <Mapping SourceColumn="IsAdditionalApproval" DataSetColumn="IsAdditionalApproval" />
+              <Mapping SourceColumn="branch" DataSetColumn="branch" />
+              <Mapping SourceColumn="MDiscount" DataSetColumn="MDiscount" />
+              <Mapping SourceColumn="PayInProcess" DataSetColumn="PayInProcess" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="CompImage" DataSetColumn="CompImage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_PWRALL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DS_PWRALL" msprop:Generator_UserDSName="DS_PWRALL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_ProjEstimateALL" msprop:Generator_TableClassName="View_ProjEstimateALLDataTable" msprop:Generator_TableVarName="tableView_ProjEstimateALL" msprop:Generator_TablePropName="View_ProjEstimateALL" msprop:Generator_RowDeletingName="View_ProjEstimateALLRowDeleting" msprop:Generator_RowChangingName="View_ProjEstimateALLRowChanging" msprop:Generator_RowEvHandlerName="View_ProjEstimateALLRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ProjEstimateALLRowDeleted" msprop:Generator_UserTableName="View_ProjEstimateALL" msprop:Generator_RowChangedName="View_ProjEstimateALLRowChanged" msprop:Generator_RowEvArgName="View_ProjEstimateALLRowChangeEvent" msprop:Generator_RowClassName="View_ProjEstimateALLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EstimateNo" msprop:Generator_ColumnVarNameInTable="columnEstimateNo" msprop:Generator_ColumnPropNameInRow="EstimateNo" msprop:Generator_ColumnPropNameInTable="EstimateNoColumn" msprop:Generator_UserColumnName="EstimateNo" type="xs:int" />
+              <xs:element name="BranchID" msprop:Generator_ColumnVarNameInTable="columnBranchID" msprop:Generator_ColumnPropNameInRow="BranchID" msprop:Generator_ColumnPropNameInTable="BranchIDColumn" msprop:Generator_UserColumnName="BranchID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstDate" msprop:Generator_ColumnVarNameInTable="columnEstDate" msprop:Generator_ColumnPropNameInRow="EstDate" msprop:Generator_ColumnPropNameInTable="EstDateColumn" msprop:Generator_UserColumnName="EstDate" type="xs:dateTime" />
+              <xs:element name="SystemID" msprop:Generator_ColumnVarNameInTable="columnSystemID" msprop:Generator_ColumnPropNameInRow="SystemID" msprop:Generator_ColumnPropNameInTable="SystemIDColumn" msprop:Generator_UserColumnName="SystemID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UsrID" msprop:Generator_ColumnVarNameInTable="columnUsrID" msprop:Generator_ColumnPropNameInRow="UsrID" msprop:Generator_ColumnPropNameInTable="UsrIDColumn" msprop:Generator_UserColumnName="UsrID" type="xs:int" minOccurs="0" />
+              <xs:element name="WorkNo" msprop:Generator_ColumnVarNameInTable="columnWorkNo" msprop:Generator_ColumnPropNameInRow="WorkNo" msprop:Generator_ColumnPropNameInTable="WorkNoColumn" msprop:Generator_UserColumnName="WorkNo" type="xs:int" minOccurs="0" />
+              <xs:element name="WorkDesc" msprop:Generator_ColumnVarNameInTable="columnWorkDesc" msprop:Generator_ColumnPropNameInRow="WorkDesc" msprop:Generator_ColumnPropNameInTable="WorkDescColumn" msprop:Generator_UserColumnName="WorkDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:double" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:double" minOccurs="0" />
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Paid" msprop:Generator_ColumnVarNameInTable="columnPaid" msprop:Generator_ColumnPropNameInRow="Paid" msprop:Generator_ColumnPropNameInTable="PaidColumn" msprop:Generator_UserColumnName="Paid" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExtraComments" msprop:Generator_ColumnVarNameInTable="columnExtraComments" msprop:Generator_ColumnPropNameInRow="ExtraComments" msprop:Generator_ColumnPropNameInTable="ExtraCommentsColumn" msprop:Generator_UserColumnName="ExtraComments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAdditionalApproval" msprop:Generator_ColumnVarNameInTable="columnIsAdditionalApproval" msprop:Generator_ColumnPropNameInRow="IsAdditionalApproval" msprop:Generator_ColumnPropNameInTable="IsAdditionalApprovalColumn" msprop:Generator_UserColumnName="IsAdditionalApproval" type="xs:boolean" minOccurs="0" />
+              <xs:element name="branch" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnbranch" msprop:Generator_ColumnPropNameInRow="branch" msprop:Generator_ColumnPropNameInTable="branchColumn" msprop:Generator_UserColumnName="branch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MDiscount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMDiscount" msprop:Generator_ColumnPropNameInRow="MDiscount" msprop:Generator_ColumnPropNameInTable="MDiscountColumn" msprop:Generator_UserColumnName="MDiscount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PayInProcess" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPayInProcess" msprop:Generator_ColumnPropNameInRow="PayInProcess" msprop:Generator_ColumnPropNameInTable="PayInProcessColumn" msprop:Generator_UserColumnName="PayInProcess" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UserName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompImage" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCompImage" msprop:Generator_ColumnPropNameInRow="CompImage" msprop:Generator_ColumnPropNameInTable="CompImageColumn" msprop:Generator_UserColumnName="CompImage" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_ProjEstimateALL" />
+      <xs:field xpath="mstns:EstimateNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

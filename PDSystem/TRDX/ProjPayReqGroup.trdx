@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report DataSourceName="DS_PaySummGroup" Width="7.74271647135417in" Name="ProjPayReqGroup" xmlns="http://schemas.telerik.com/reporting/2012/3.4">
+  <DataSources>
+    <SqlDataSource ConnectionString="SQLPWRDB" SelectCommand="SELECT   [EstimateNo]&#xD;&#xA;      ,[PayID]&#xD;&#xA;      ,[VendorID]&#xD;&#xA;      ,[VendorName]&#xD;&#xA;      ,[GrossAmt]&#xD;&#xA;      ,[PaidAmt]&#xD;&#xA;      ,[PayRecmd]&#xD;&#xA;      ,[Balance]&#xD;&#xA;      ,[Discount]&#xD;&#xA;      ,[NewTrans]&#xD;&#xA;      ,[UserName]&#xD;&#xA;      ,[ShowonRpt]&#xD;&#xA;  FROM [SQLPWRDB].[dbo].[View_EstPayRequest]" Name="DS_PaySummGroup" />
+  </DataSources>
+  <Items>
+    <ReportFooterSection Height="0.12291693687439in" Name="reportFooter">
+      <Style Visible="False" />
+      <Items>
+        <TextBox Width="1.52020998589156in" Height="0.102083603541056in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="=First(Fields.VendorName)" CanGrow="True" Name="vendorNameCountFunctionTextBox1" StyleName="Data" />
+        <TextBox Width="1.52020998589156in" Height="0.102083603541056in" Left="1.56187665255822in" Top="0.0208333333333333in" Value="=Sum(Fields.GrossAmt)" CanGrow="True" Name="grossAmtSumFunctionTextBox1" StyleName="Data" />
+        <TextBox Width="1.52020998589156in" Height="0.102083603541056in" Left="3.10291997178311in" Top="0.0208333333333333in" Value="=Sum(Fields.PaidAmt)" CanGrow="True" Name="paidAmtSumFunctionTextBox1" StyleName="Data" />
+        <TextBox Width="1.52020998589156in" Height="0.102083603541056in" Left="4.643963291008in" Top="0.0208333333333333in" Value="=Sum(Fields.PayRecmd)" CanGrow="True" Name="payRecmdSumFunctionTextBox1" StyleName="Data" />
+        <TextBox Width="1.52020998589156in" Height="0.102083603541056in" Left="6.18500661023289in" Top="0.0208333333333333in" Value="=Sum(Fields.Balance)" CanGrow="True" Name="balanceSumFunctionTextBox1" StyleName="Data" />
+      </Items>
+    </ReportFooterSection>
+    <PageHeaderSection Height="0.100000063578288in" Name="pageHeader">
+      <Items>
+        <TextBox Width="7.68438326279111in" Height="0.0791667302449545in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="ProjPayReqGroup" Name="reportNameTextBox" StyleName="PageInfo">
+          <Style Visible="False" />
+        </TextBox>
+      </Items>
+    </PageHeaderSection>
+    <PageFooterSection Height="0.152083476384481in" Name="pageFooter">
+      <Style Visible="False" />
+      <Items>
+        <TextBox Width="3.83177496472889in" Height="0.131250143051147in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="=NOW()" Name="currentTimeTextBox" StyleName="PageInfo">
+          <Style Visible="False" />
+        </TextBox>
+        <TextBox Width="3.83177496472889in" Height="0.131250143051147in" Left="3.87344163139556in" Top="0.0208333333333333in" Value="=PageNumber" CanShrink="True" Name="pageInfoTextBox" StyleName="PageInfo">
+          <Style Visible="False" TextAlign="Right" />
+        </TextBox>
+      </Items>
+    </PageFooterSection>
+    <ReportHeaderSection Height="0.699999786560017in" Name="reportHeader">
+      <Items>
+        <TextBox Width="7.72604992945778in" Height="0.258333342417358in" Left="0in" Top="0in" Value="Payment Request Detail" Name="titleTextBox" StyleName="Title">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center" VerticalAlign="Middle">
+            <Font Size="12pt" />
+          </Style>
+        </TextBox>
+        <TextBox Width="3.69992132774946in" Height="0.420793771743774in" Left="0in" Top="0.25841212272644in" Value="Vendor Name / Work Detail" CanGrow="True" Name="vendorNameCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center">
+            <BorderStyle Default="Solid" />
+            <Font Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1in" Height="0.420793771743774in" Left="3.65833346048991in" Top="0.25841212272644in" Value="Work Processing Cost" CanGrow="True" Name="grossAmtCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center">
+            <BorderStyle Default="Solid" />
+            <Font Size="9pt" Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="0.999921518484329in" Height="0.420793771743774in" Left="4.65841229756673in" Top="0.25841212272644in" Value="Paid Amount" CanGrow="True" Name="paidAmtCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center">
+            <BorderStyle Default="Solid" />
+            <Font Size="9pt" Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="0.999920882701451in" Height="0.420793771743774in" Left="5.65841293334961in" Top="0.25841212272644in" Value="Payment Recommend" CanGrow="True" Name="payRecmdCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center">
+            <BorderStyle Default="Solid" />
+            <Font Size="9pt" Bold="True" />
+          </Style>
+        </TextBox>
+        <TextBox Width="1.04166666666667in" Height="0.420793771743774in" Left="6.66355005900065in" Top="0.25841212272644in" Value="Balance" CanGrow="True" Name="balanceCaptionTextBox" StyleName="Caption">
+          <Style BackgroundColor="217, 217, 217" TextAlign="Center">
+            <BorderStyle Default="Solid" />
+            <Font Size="9pt" Bold="True" />
+          </Style>
+        </TextBox>
+      </Items>
+    </ReportHeaderSection>
+    <DetailSection Height="0.158333539962769in" Name="detail">
+      <Style Visible="False" />
+      <Items>
+        <TextBox Width="3.67908799441613in" Height="0.137500206629435in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="=Fields.VendorName" CanGrow="True" CanShrink="True" Name="vendorNameDataTextBox" StyleName="Data">
+          <Style Visible="False" TextAlign="Left" />
+        </TextBox>
+        <TextBox Width="1.00000003766971in" Height="0.137500206629435in" Left="3.70000016482629in" Top="0.0208333333333333in" Value="=Fields.GrossAmt" Format="{0:N0}" CanGrow="True" CanShrink="True" Name="grossAmtDataTextBox" StyleName="Data">
+          <Style Visible="False" TextAlign="Right" />
+        </TextBox>
+        <TextBox Width="0.999922154267206in" Height="0.137500206629435in" Left="4.70007903957282in" Top="0.0208333333333333in" Value="=Fields.PaidAmt" Format="{0:N0}" CanGrow="True" CanShrink="True" Name="paidAmtDataTextBox" StyleName="Data">
+          <Style Visible="False" TextAlign="Right" />
+        </TextBox>
+        <TextBox Width="0.999920882701451in" Height="0.137500206629435in" Left="5.70007971302541in" Top="0.0208333333333333in" Value="=Fields.PayRecmd" Format="{0:N0}" CanGrow="True" CanShrink="True" Name="payRecmdDataTextBox" StyleName="Data">
+          <Style Visible="False" TextAlign="Right" />
+        </TextBox>
+        <TextBox Width="0.999999719778274in" Height="0.137500206629435in" Left="6.70521687634617in" Top="0.0208333333333333in" Value="=Fields.Balance" Format="{0:N0}" CanGrow="True" CanShrink="True" Name="balanceDataTextBox" StyleName="Data">
+          <Style Visible="False" TextAlign="Right" />
+        </TextBox>
+      </Items>
+    </DetailSection>
+  </Items>
+  <StyleSheet>
+    <StyleRule>
+      <Style Color="Black">
+        <Font Name="Tahoma" Size="18pt" Bold="True" Italic="False" Underline="False" Strikeout="False" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Title" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black" VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="10pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Caption" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="9pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="Data" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="8pt" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="ReportItemBase" StyleName="PageInfo" />
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <PageSettings>
+    <PageSettings PaperKind="A4" Landscape="False">
+      <Margins>
+        <MarginsU Left="0.5in" Right="0in" Top="0in" Bottom="0in" />
+      </Margins>
+    </PageSettings>
+  </PageSettings>
+  <Groups>
+    <Group Name="vendorIDGroup">
+      <GroupHeader>
+        <GroupHeaderSection Height="0.199999888737996in" Name="vendorIDGroupHeaderSection">
+          <Style Visible="False" />
+          <Items>
+            <TextBox Width="1.19999996821086in" Height="0.179166555404663in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="Vendor ID:" CanGrow="True" Name="vendorIDCaptionTextBox" StyleName="Caption">
+              <Style TextAlign="Right" />
+            </TextBox>
+            <TextBox Width="6.44271662791359in" Height="0.179166555404663in" Left="1.24166663487752in" Top="0.0208333333333333in" Value="=Fields.VendorID" CanGrow="True" Name="vendorIDDataTextBox" StyleName="Data" />
+          </Items>
+        </GroupHeaderSection>
+      </GroupHeader>
+      <GroupFooter>
+        <GroupFooterSection Height="0.264583349227905in" Name="vendorIDGroupFooterSection">
+          <Style Visible="True" />
+          <Items>
+            <TextBox Width="3.67908799441613in" Height="0.243710597356161in" Left="0.0208333333333333in" Top="0.0208333333333333in" Value="=First(Fields.VendorName)" CanGrow="True" Name="vendorNameCountFunctionTextBox" StyleName="Data">
+              <Style>
+                <BorderStyle Default="Solid" Top="None" Bottom="Dashed" Left="None" Right="None" />
+                <BorderColor Top="Black" Bottom="Black" Left="Black" Right="Black" />
+                <BorderWidth Top="1pt" Bottom="1pt" Left="1pt" Right="1pt" />
+              </Style>
+            </TextBox>
+            <TextBox Width="1.00000003766971in" Height="0.243710597356161in" Left="3.70000016482629in" Top="0.0208333333333333in" Value="=Sum(Fields.GrossAmt)" Format="{0:N0}" CanGrow="True" Name="grossAmtSumFunctionTextBox" StyleName="Data">
+              <Style TextAlign="Right">
+                <BorderStyle Default="Solid" Top="None" Bottom="Dashed" Left="None" Right="None" />
+                <BorderColor Top="Black" Bottom="Black" Left="Black" Right="Black" />
+                <BorderWidth Top="1pt" Bottom="1pt" Left="1pt" Right="1pt" />
+              </Style>
+            </TextBox>
+            <TextBox Width="0.999922154267206in" Height="0.243710597356161in" Left="4.70007903957282in" Top="0.0208333333333333in" Value="=Sum(Fields.PaidAmt)" Format="{0:N0}" CanGrow="True" Name="paidAmtSumFunctionTextBox" StyleName="Data">
+              <Style TextAlign="Right">
+                <BorderStyle Default="Solid" Top="None" Bottom="Dashed" Left="None" Right="None" />
+                <BorderColor Top="Black" Bottom="Black" Left="Black" Right="Black" />
+                <BorderWidth Top="1pt" Bottom="1pt" Left="1pt" Right="1pt" />
+              </Style>
+            </TextBox>
+            <TextBox Width="0.999920882701451in" Height="0.243710597356161in" Left="5.70007971302541in" Top="0.0208333333333333in" Value="=Sum(Fields.PayRecmd)" Format="{0:N0}" CanGrow="True" Name="payRecmdSumFunctionTextBox" StyleName="Data">
+              <Style TextAlign="Right">
+                <BorderStyle Default="Solid" Top="None" Bottom="Dashed" Left="None" Right="None" />
+                <BorderColor Top="Black" Bottom="Black" Left="Black" Right="Black" />
+                <BorderWidth Top="1pt" Bottom="1pt" Left="1pt" Right="1pt" />
+              </Style>
+            </TextBox>
+            <TextBox Width="0.999999719778274in" Height="0.243710597356161in" Left="6.70521687634617in" Top="0.0208333333333333in" Value="=Sum(Fields.Balance)" Format="{0:N0}" CanGrow="True" Name="balanceSumFunctionTextBox" StyleName="Data">
+              <Style TextAlign="Right">
+                <BorderStyle Default="Solid" Top="None" Bottom="Dashed" Left="None" Right="None" />
+                <BorderColor Top="Black" Bottom="Black" Left="Black" Right="Black" />
+                <BorderWidth Top="1pt" Bottom="1pt" Left="1pt" Right="1pt" />
+              </Style>
+              <ConditionalFormatting>
+                <FormattingRule>
+                  <Style Visible="True" Color="White" />
+                  <Filters>
+                    <Filter Expression="=Fields.Balance" Operator="Equal" Value="0" />
+                  </Filters>
+                </FormattingRule>
+              </ConditionalFormatting>
+            </TextBox>
+          </Items>
+        </GroupFooterSection>
+      </GroupFooter>
+      <Groupings>
+        <Grouping Expression="=Fields.VendorID" />
+      </Groupings>
+    </Group>
+    <Group Name="labelsGroup">
+      <GroupHeader>
+        <GroupHeaderSection PrintOnEveryPage="True" Height="0.0520833333333337in" Name="labelsGroupHeaderSection" />
+      </GroupHeader>
+      <GroupFooter>
+        <GroupFooterSection Height="0.0520833333333333in" Name="labelsGroupFooterSection">
+          <Style Visible="False" />
+        </GroupFooterSection>
+      </GroupFooter>
+    </Group>
+  </Groups>
+</Report>

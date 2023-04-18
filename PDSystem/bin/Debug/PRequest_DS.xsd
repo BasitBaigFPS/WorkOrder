@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PRequest_DS" targetNamespace="http://tempuri.org/PRequest_DS.xsd" xmlns:mstns="http://tempuri.org/PRequest_DS.xsd" xmlns="http://tempuri.org/PRequest_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="AmountInWords" GeneratorFunctionsComponentClassName="AmountInWords" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="AmountInWords" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PWRDBConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PWRDBConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PDSystem.Properties.Settings.GlobalReference.Default.PWRDBConn" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_EstPayRequestTableAdapter" GeneratorDataComponentClassName="View_EstPayRequestTableAdapter" Name="View_EstPayRequest" UserDataComponentName="View_EstPayRequestTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PWRDBConn (Settings)" DbObjectName="SQLPWRDB.dbo.View_EstPayRequest" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EstimateNo, WorkNo, PayID, VendorID, VendorName, GrossAmt, PaidAmt, PayRecmd, Balance, PayDetail, Discount, NewTrans, WorkDesc, UserName FROM dbo.View_EstPayRequest</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EstimateNo" DataSetColumn="EstimateNo" />
+              <Mapping SourceColumn="WorkNo" DataSetColumn="WorkNo" />
+              <Mapping SourceColumn="PayID" DataSetColumn="PayID" />
+              <Mapping SourceColumn="VendorID" DataSetColumn="VendorID" />
+              <Mapping SourceColumn="VendorName" DataSetColumn="VendorName" />
+              <Mapping SourceColumn="GrossAmt" DataSetColumn="GrossAmt" />
+              <Mapping SourceColumn="PaidAmt" DataSetColumn="PaidAmt" />
+              <Mapping SourceColumn="PayRecmd" DataSetColumn="PayRecmd" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="PayDetail" DataSetColumn="PayDetail" />
+              <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
+              <Mapping SourceColumn="NewTrans" DataSetColumn="NewTrans" />
+              <Mapping SourceColumn="WorkDesc" DataSetColumn="WorkDesc" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PRequest_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PRequest_DS" msprop:Generator_UserDSName="PRequest_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_EstPayRequest" msprop:Generator_TableClassName="View_EstPayRequestDataTable" msprop:Generator_TableVarName="tableView_EstPayRequest" msprop:Generator_TablePropName="View_EstPayRequest" msprop:Generator_RowDeletingName="View_EstPayRequestRowDeleting" msprop:Generator_UserTableName="View_EstPayRequest" msprop:Generator_RowChangingName="View_EstPayRequestRowChanging" msprop:Generator_RowEvHandlerName="View_EstPayRequestRowChangeEventHandler" msprop:Generator_RowDeletedName="View_EstPayRequestRowDeleted" msprop:Generator_RowEvArgName="View_EstPayRequestRowChangeEvent" msprop:Generator_RowChangedName="View_EstPayRequestRowChanged" msprop:Generator_RowClassName="View_EstPayRequestRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EstimateNo" msprop:Generator_ColumnVarNameInTable="columnEstimateNo" msprop:Generator_ColumnPropNameInRow="EstimateNo" msprop:Generator_ColumnPropNameInTable="EstimateNoColumn" msprop:Generator_UserColumnName="EstimateNo" type="xs:int" />
+              <xs:element name="WorkNo" msprop:Generator_ColumnVarNameInTable="columnWorkNo" msprop:Generator_ColumnPropNameInRow="WorkNo" msprop:Generator_ColumnPropNameInTable="WorkNoColumn" msprop:Generator_UserColumnName="WorkNo" type="xs:int" />
+              <xs:element name="PayID" msprop:Generator_ColumnVarNameInTable="columnPayID" msprop:Generator_ColumnPropNameInRow="PayID" msprop:Generator_ColumnPropNameInTable="PayIDColumn" msprop:Generator_UserColumnName="PayID" type="xs:int" />
+              <xs:element name="VendorID" msprop:Generator_ColumnVarNameInTable="columnVendorID" msprop:Generator_ColumnPropNameInRow="VendorID" msprop:Generator_ColumnPropNameInTable="VendorIDColumn" msprop:Generator_UserColumnName="VendorID" type="xs:int" />
+              <xs:element name="VendorName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVendorName" msprop:Generator_ColumnPropNameInRow="VendorName" msprop:Generator_ColumnPropNameInTable="VendorNameColumn" msprop:Generator_UserColumnName="VendorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GrossAmt" msprop:Generator_ColumnVarNameInTable="columnGrossAmt" msprop:Generator_ColumnPropNameInRow="GrossAmt" msprop:Generator_ColumnPropNameInTable="GrossAmtColumn" msprop:Generator_UserColumnName="GrossAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PaidAmt" msprop:Generator_ColumnVarNameInTable="columnPaidAmt" msprop:Generator_ColumnPropNameInRow="PaidAmt" msprop:Generator_ColumnPropNameInTable="PaidAmtColumn" msprop:Generator_UserColumnName="PaidAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PayRecmd" msprop:Generator_ColumnVarNameInTable="columnPayRecmd" msprop:Generator_ColumnPropNameInRow="PayRecmd" msprop:Generator_ColumnPropNameInTable="PayRecmdColumn" msprop:Generator_UserColumnName="PayRecmd" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PayDetail" msprop:Generator_ColumnVarNameInTable="columnPayDetail" msprop:Generator_ColumnPropNameInRow="PayDetail" msprop:Generator_ColumnPropNameInTable="PayDetailColumn" msprop:Generator_UserColumnName="PayDetail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NewTrans" msprop:Generator_ColumnVarNameInTable="columnNewTrans" msprop:Generator_ColumnPropNameInRow="NewTrans" msprop:Generator_ColumnPropNameInTable="NewTransColumn" msprop:Generator_UserColumnName="NewTrans" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WorkDesc" msprop:Generator_ColumnVarNameInTable="columnWorkDesc" msprop:Generator_ColumnPropNameInRow="WorkDesc" msprop:Generator_ColumnPropNameInTable="WorkDescColumn" msprop:Generator_UserColumnName="WorkDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
